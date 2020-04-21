@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+        <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbarSearch"
+                app:title="@string/search_on_db"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:navigationIcon="?attr/homeAsUpIndicator"
+                android:background="?attr/colorPrimary"
+                android:elevation="@dimen/elevation_toolbar"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+        <TableLayout
+                android:id="@+id/tblWifiLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_16dp"
+                android:layout_marginLeft="@dimen/margin_16dp"
+                android:layout_marginRight="@dimen/margin_16dp"
+                android:layout_below="@id/toolbarSearch"
+                android:stretchColumns="1, 2">
+            <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/lblChooseLoc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/padding_3dp"
+                        android:text="@string/label_choose_loc"
+                        style="@style/TextLabel"/>
+                <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spWifiLocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/padding_3dp"
+                        android:entries="@array/wifi_location_hint"/>
+            </TableRow>
+            <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/lblChooseNum"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/padding_3dp"
+                        android:text="@string/label_choose_num"
+                        style="@style/TextLabel"/>
+                <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/txtNumWifi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/range_1_100"
+                        android:maxLength="3"
+                        android:gravity="center"
+                        android:inputType="number"/>
+            </TableRow>
+        </TableLayout>
+        <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/margin_16dp"
+                android:layout_marginLeft="@dimen/margin_16dp"
+                android:layout_marginRight="@dimen/margin_16dp"
+                android:layout_marginBottom="@dimen/margin_32dp"
+                android:layout_below="@id/tblWifiLabel"
+                android:layout_above="@+id/linearAction">
+        <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+            <TableLayout
+                    android:id="@+id/tblSearchWifi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="*">
+            </TableLayout>
+        </ScrollView>
+        </HorizontalScrollView>
+
+        <TableLayout
+                android:id="@+id/linearAction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_16dp"
+                android:layout_marginRight="@dimen/margin_16dp"
+                android:layout_marginBottom="@dimen/margin_22dp"
+                android:layout_alignParentBottom="true"
+                android:stretchColumns="*">
+            <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/btnClear"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_50dp"
+                        android:contentDescription="@string/desc_trash"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:src="@drawable/ic_trash_dark"/>
+                <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/btnSearch"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_50dp"
+                        android:contentDescription="@string/desc_search"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:src="@drawable/ic_search_dark"/>
+            </TableRow>
+        </TableLayout>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

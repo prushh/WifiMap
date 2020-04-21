@@ -1,0 +1,26 @@
+<resources>
+
+   <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+   </style>
+
+    <!-- TODO
+            Switch theme: https://carthrottle.io/how-to-implement-flexible-night-mode-in-your-android-app-f00f0f83b70e
+                       https://blog.iamsuleiman.com/daynight-theme-android-tutorial-example/
+     -->
+
+    <style name="TextTable" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">@dimen/padding_3dp</item>
+        <item name="android:background">@drawable/cellborder</item>
+    </style>
+
+    <style name="TextLabel" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">@dimen/text_size_20sp</item>
+    </style>
+
+</resources>

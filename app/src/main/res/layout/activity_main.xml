@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+        <ProgressBar
+                android:id="@+id/progressCircular"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:indeterminate="true"
+                android:visibility="gone"
+                android:max="100"/>
+
+        <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbarMain"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                android:elevation="@dimen/elevation_toolbar"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lblListScan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_list_scan"
+            android:layout_below="@+id/toolbarMain"
+            android:layout_margin="@dimen/margin_16dp"
+            style="@style/TextLabel"/>
+
+        <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_16dp"
+                android:layout_marginRight="@dimen/margin_16dp"
+                android:layout_below="@id/lblListScan"
+                android:layout_above="@+id/btnStartScan">
+        <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+            <TableLayout
+                    android:id="@+id/tblWifiScan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="*">
+            </TableLayout>
+        </ScrollView>
+        </HorizontalScrollView>
+
+        <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnStartScan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_16dp"
+                android:layout_marginLeft="@dimen/margin_16dp"
+                android:layout_marginRight="@dimen/margin_16dp"
+                android:layout_marginBottom="@dimen/margin_8dp"
+                android:text="@string/button_insert_location"
+                android:layout_above="@+id/btnClearList"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnClearList"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_50dp"
+                android:layout_marginLeft="@dimen/margin_16dp"
+                android:layout_marginRight="@dimen/margin_16dp"
+                android:layout_marginBottom="@dimen/margin_22dp"
+                android:contentDescription="@string/desc_trash"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/ic_trash_dark"
+                android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

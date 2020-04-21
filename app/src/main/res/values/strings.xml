@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">Wifi Map</string>
+    <string name="button_start_scan">Start Wifi Scan</string>
+    <string name="button_insert_location">Insert location</string>
+    <string name="action_search">Search Wifi</string>
+    <string name="action_delete">Delete data</string>
+    <string name="action_info">Information</string>
+    <string name="warning">Warning</string>
+    <string name="warning_question">Are you sure you want to exit?</string>
+    <string name="label_list_scan">List access point available</string>
+    <string name="label_list_scan_on">List access point available on</string>
+    <string name="desc_unipg">UniPG logo</string>
+    <string name="desc_trash">Clear list</string>
+    <string name="desc_search">Filter Wifi</string>
+    <string name="ssid">SSID</string>
+    <string name="level">Level</string>
+    <string name="frequency">Frequency</string>
+    <string name="capabilities">Capabilities</string>
+    <string name="search_on_db">Search on history</string>
+    <string name="label_choose_loc">Choose location:</string>
+    <string name="label_choose_num">Choose number:</string>
+    <string name="label_insert_location">Insert label for location</string>
+    <string name="label_clear_table">Table cleaning performed</string>
+    <string name="label_not_valid_location">Not valid location</string>
+    <string name="label_wifi_disabled">Wifi is disabled, you need to enable it to use the application</string>
+    <string name="label_gps_disabled">GPS is disabled, you need to enable it to use the application</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="space">\u0020</string>
+    <string name="enable">Enable</string>
+    <string name="success">Success</string>
+    <string name="no_data_delete">No data to delete</string>
+    <string name="ok">Ok</string>
+    <string name="exit">Exit</string>
+    <string name="search">Search</string>
+    <string name="save_on_db">Save on Database</string>
+    <string name="start_scanning">Scanning Wifi</string>
+    <string name="error_scanning">Error scanning</string>
+    <string name="no_location">No location avaible</string>
+    <string name="not_valid_number">Not a valid number</string>
+    <string name="not_valid_loc_num">Not valid location and number</string>
+    <string name="range_1_100">1 &#8211; 100</string>
+    <string name="warning_gps">GPS permission allows us to access location data. Please allow in App Settings for additional functionality.</string>
+    <string name="info_application">
+        Questa applicazione &#232; stata realizzata da:\n\n
+        Mencagli Marco\nOuakri Amir\nPruscini Davide\n\n
+        per il progetto &quot;WifiMap&quot; del corso &quot;Ingegneria del Software&quot; dell\'Universit&#224;
+        Degli Studi di Perugia, assegnato dal Prof. Alfredo Milani.\n
+        L\'app permette di scansionare le reti Wifi nelle vicinanze cos&#236; da rilevare e memorizzare
+        tutti i dettagli di quest\'ultime; viene data inoltre all\'utente la possibilità di consultare queste informazioni
+        anche in un secondo momento.
+    </string>
+
+    <string-array name="wifi_location_hint">
+        <item>No location added</item>
+    </string-array>
+</resources>

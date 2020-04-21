@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+        <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbarInfo"
+                app:title="@string/action_info"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:navigationIcon="?attr/homeAsUpIndicator"
+                android:background="?attr/colorPrimary"
+                android:elevation="@dimen/elevation_toolbar"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+        <TableLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginRight="@dimen/margin_8dp"
+                android:layout_marginLeft="@dimen/margin_8dp"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:stretchColumns="*">
+            <TableRow
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/info_application"
+                        android:textColor="@color/colorBlack"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/text_size_18sp"
+                        android:layout_span="2"/>
+            </TableRow>
+            <TableRow
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/margin_32dp">
+                <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_height="@dimen/height_125dp"
+                        android:layout_width="match_parent"
+                        android:contentDescription="@string/desc_unipg"
+                        android:src="@mipmap/unipg_logo"/>
+                <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_height="@dimen/height_120dp"
+                        android:layout_width="match_parent"
+                        android:contentDescription="@string/desc_trash"
+                        android:src="@mipmap/ic_wifimap_round"
+                        android:padding="@dimen/padding_3dp"/>
+            </TableRow>
+        </TableLayout>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
